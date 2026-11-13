@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -113,8 +112,8 @@ document.getElementById("login").onclick = async () => {
             document.getElementById("password").value
         );
     } catch (error) {
-        message.textContent = "Erreur : vérifie ton e-mail et ton mot de passe.";
-    }
+    message.textContent = "Erreur technique : " + error.code;
+}
 };
 
 onAuthStateChanged(auth, (user) => {
